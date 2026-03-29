@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    --background: 0.97 0.008 300;
+    --foreground: 0.14 0 0;
+    --card: 1 0 0;
+    --card-foreground: 0.14 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.14 0 0;
+    --primary: 0.18 0.085 310;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.93 0.03 280;
+    --secondary-foreground: 0.18 0.085 310;
+    --muted: 0.95 0.008 300;
+    --muted-foreground: 0.49 0 0;
+    --accent: 0.76 0.095 10;
+    --accent-foreground: 0.18 0.085 310;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.91 0.01 290;
+    --input: 0.91 0.01 290;
+    --ring: 0.76 0.095 10;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.18 0.085 310;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 0.76 0.095 10;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.25 0.09 308;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 0.3 0.09 308;
+    --sidebar-ring: 0.76 0.095 10;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.95 0.008 300);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.76 0.095 10);
+  border-radius: 3px;
+}
+
+.header-gradient {
+  background: linear-gradient(135deg, #2b1236 0%, #3a1a4c 100%);
+}
+.footer-gradient {
+  background: linear-gradient(135deg, #2b1236 0%, #3a1a4c 100%);
+}
+
+.hero-bg {
+  background: linear-gradient(
+    135deg,
+    #1a0a24 0%,
+    #2b1236 40%,
+    #4a2060 70%,
+    #3a1a4c 100%
+  );
+  position: relative;
+}
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 20% 50%,
+      rgba(243, 160, 168, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(167, 139, 250, 0.1) 0%,
+      transparent 40%
+    );
+  pointer-events: none;
+}
+
+.lavender-panel {
+  background: linear-gradient(135deg, #d7d3ff 0%, #cfc8ff 100%);
+}
+.peach-panel {
+  background: linear-gradient(135deg, #f7d0c7 0%, #f3beb6 100%);
+}
+
+.btn-pink {
+  background: linear-gradient(135deg, #f3a0a8 0%, #f07b87 100%);
+  color: #2b1236;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-pink:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(243, 160, 168, 0.45);
+}
+
+.emergency-banner {
+  background: linear-gradient(135deg, #2b1236 0%, #4a1a5c 50%, #3a1a4c 100%);
+  border: 1px solid rgba(243, 160, 168, 0.3);
+}
+
+.chat-user {
+  background: linear-gradient(135deg, #3a1a4c 0%, #2b1236 100%);
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+}
+.chat-bot {
+  background: linear-gradient(135deg, #ede9ff 0%, #e4dfff 100%);
+  color: #1a1a1a;
+  border-radius: 18px 18px 18px 4px;
+}
+
+.law-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(43, 18, 54, 0.15);
+}
+.helpline-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(243, 160, 168, 0.25);
+}
